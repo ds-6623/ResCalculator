@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="rescalc.css">
+        <title>ResCalc</title>
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1>Resource Calculator</h1>
+        </header>
+        <main class="main">
+            <div class="calc-container">
+                <div class="calc-container_left">
+                    <div class="calc-container_element">
+                        <h3>
+                            Needed amount of <span class="span">resource</span>
+                        </h3>
+                        <input class="input" id="overall" type="number" placeholder="Enter number">
+                    </div>
+                    <div class="calc-container_element">
+                        <h3>
+                            Amount of <span class="span">resource</span><br>in your inventory:
+                        </h3>
+                        <input class="input" id="inventory" type="number" placeholder="Enter number">
+                    </div>
+                    <div class="calc-container_element">
+                        <h3>
+                            Ship's mining capability:
+                        </h3>
+                        <input class="input" id="mining" type="number" placeholder="Enter number">
+                    </div>
+                </div>
+                <div class="calc-container_center">
+                    <button class="calc" id="calc" onclick="calc()">
+                        <p>CALCULATE -></p>
+                    </button>
+                </div>
+                <div class="calc-container_right">
+                    <div class="calc-container_element calc-container_results__padding">
+                        <h3>Amount of <span class="span">resource</span> to buy (if needed):</h3>
+                    </div>
+                    <div class="calc-container_element calc-container_results__padding">
+                        <h3>Amount of <span class="span">ore</span> to mine:</h3>
+                    </div>
+                    <div class="calc-container_element calc-container_results__padding">
+                        <h3>Approximate mining time:</h3>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
