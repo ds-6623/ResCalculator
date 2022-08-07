@@ -9,43 +9,58 @@
         <title>ResCalc</title>
     </head>
     <body class="body">
-        <div class="calculator-holder">
-            <div class="calculator-holder__left">
-                <div class="calculator-holder_block">
-                    <p class="calculator-holder_overall__label">Needed amount</p>
-                    <input class="input" id="OverallInput" type="number" placeholder="number">
+        <header class="header">
+            <h1>Resource Calculator</h1>
+        </header>
+        <main class="main">
+            <div class="calc-container">
+                <div class="calc-container_left">
+                    <div class="calc-container_element">
+                        <h3>
+                            Needed amount of <span class="span">resource</span>
+                        </h3>
+                        <input class="input" id="overall" type="number" placeholder="Enter number">
+                    </div>
+                    <div class="calc-container_element">
+                        <h3>
+                            Amount of <span class="span">resource</span><br>in your inventory:
+                        </h3>
+                        <input class="input" id="inventory" type="number" placeholder="Enter number">
+                    </div>
+                    <div class="calc-container_element">
+                        <h3>
+                            Ship's mining capability:
+                        </h3>
+                        <input class="input" id="mining" type="number" placeholder="Enter number">
+                    </div>
                 </div>
-                <br>
-                <div class="calculator-holder_block">
-                    <p class="heading">Amount in the inventory</p>
-                    <input class="input" id="AtmInput" type="number" placeholder="number">
+                <div class="calc-container_center">
+                    <button class="calc" id="calc" onclick="calc()">
+                        <p>CALCULATE -></p>
+                    </button>
                 </div>
-                <br>
-                <div class="calculator-holder_block">
-                    <p class="heading">Ore/min</p>
-                    <input class="input" id="SpeedInput" type="number" placeholder="number">
+                <div class="calc-container_right">
+                    <div class="calc-container_element calc-container_results__padding">
+                        <h3>Amount of <span class="span">resource</span> to buy (if needed):</h3>
+                        <p id="result1">
+                            <br>
+                        </p>
+                    </div>
+                    <div class="calc-container_element calc-container_results__padding">
+                        <h3>Amount of <span class="span">ore</span> to mine:</h3>
+                        <p id="result2">
+                            <br>
+                        </p>
+                    </div>
+                    <div class="calc-container_element calc-container_results__padding">
+                        <h3>Approximate mining time:</h3>
+                        <p id="result3">
+                            <br>
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="calculator-holder__center">
-                <button class="calc_btn" id="calc_btn" onclick="calc()">
-                    <p>CALCULATE</p>
-                </button>
-            </div>
-            <div class="calculator-holder__right">
-                <div class="calculator-holdder_block calculator-holder_result">
-                    <p class="result">Ore left:</p>
-                    <span id="result1" name="result1">
-                        <br>
-                    </span>
-                </div>
-                <div class="calculator-holdder_block calculator-holder_result">
-                    <p class="result">Approx. minutes:</p>
-                    <span id="result2" name="result2">
-                        <br>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <script src="./rescalc.js"></script>
+            <script src="./rescalc.js"></script>
+        </main>
     </body>
 </html>
